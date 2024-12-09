@@ -33,5 +33,5 @@ if __name__ == "__main__":
     # pipeline (e.g., push, merge request event). If the variable is not set then
     # we are not running in CICD in github!
     if os.environ.get("CI_PIPELINE_SOURCE") is None:
-        result = subprocess.run(['pre-commit', 'install'], capture_output=True, text=True)
+        result = subprocess.run(['install'], capture_output=True, text=True)
         print(result.stdout)
